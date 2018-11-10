@@ -66,11 +66,6 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div className='app'>
-        <header>
-            <div className='wrapper'>
-              <h1>MOCKUPS</h1>
-            </div>
-        </header>
         <div className='container'>
         <Link to="/form">
           <h6>Test Form</h6>
@@ -78,13 +73,6 @@ class App extends Component {
         <Link to="/display">
           <h6>Test Display</h6>
         </Link>
-          <section className="add-item">
-            <form onSubmit={this.handleSubmit}>
-              <input type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.state.username} />
-              <input type="text" name="currentItem" placeholder="What are you bringing?" onChange={this.handleChange} value={this.state.currentItem} />
-              <button>Add Item</button>
-            </form>
-          </section>
         </div>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/form" component={AddForm}/>
