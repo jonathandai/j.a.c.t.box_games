@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import firebase from './firebase.js';
-import AddForm from './AddForm.js'
-import HomePage from './HomePage.js'
-import PhotosDisplay from './PhotosDisplay.js'
 
-import {BrowserRouter, Route, Link} from 'react-router-dom'
-
-class App extends Component {
+class PhotosDisplay extends Component {
   constructor() {
     super();
     this.state = {
@@ -18,7 +12,6 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
   handleChange(e) {
   this.setState({
     [e.target.name]: e.target.value
@@ -63,23 +56,25 @@ class App extends Component {
 }
 
   render() {
-    return (
-      <BrowserRouter>
-      <div className='app'>
-        <div className='container'>
-        <Link to="/form">
-          <h6>Test Form</h6>
-        </Link>
-        <Link to="/display">
-          <h6>Test Display</h6>
-        </Link>
+    return(
+      <section className='display-item'>
+        <div className="wrapper">
+          <ul>
+          {this.state.items.map((item) => {
+              return (
+                <li key={item.id}>
+                  <h3>{item.title}</h3>
+                  <p>brought by: {item.user}</p>
+                  <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
+                </li>
+              )
+            })
+          }
+          </ul>
         </div>
-        <Route exact path="/" component={HomePage}/>
-        <Route exact path="/form" component={AddForm}/>
-        <Route exact path="/display" component={PhotosDisplay}/>
-      </div>
-      </BrowserRouter>
-    );
+      </section>
+  )
   }
 }
-export default App;
+
+export default PhotosDisplay;

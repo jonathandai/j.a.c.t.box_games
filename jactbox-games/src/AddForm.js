@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import firebase from './firebase.js';
-import AddForm from './AddForm.js'
-import HomePage from './HomePage.js'
-import PhotosDisplay from './PhotosDisplay.js'
 
-import {BrowserRouter, Route, Link} from 'react-router-dom'
-
-class App extends Component {
+class AddForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -24,6 +18,7 @@ class App extends Component {
     [e.target.name]: e.target.value
   });
   }
+
   componentDidMount() {
     const itemsRef = firebase.database().ref('items');
     itemsRef.on('value', (snapshot) => {
@@ -63,23 +58,16 @@ class App extends Component {
 }
 
   render() {
-    return (
-      <BrowserRouter>
-      <div className='app'>
-        <div className='container'>
-        <Link to="/form">
-          <h6>Test Form</h6>
-        </Link>
-        <Link to="/display">
-          <h6>Test Display</h6>
-        </Link>
-        </div>
-        <Route exact path="/" component={HomePage}/>
-        <Route exact path="/form" component={AddForm}/>
-        <Route exact path="/display" component={PhotosDisplay}/>
-      </div>
-      </BrowserRouter>
-    );
+    return(
+    <section className="add-item">
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.state.username} />
+        <input type="text" name="currentItem" placeholder="What are you bringing?" onChange={this.handleChange} value={this.state.currentItem} />
+        <button>Add Item</button>
+      </form>
+    </section>
+  )
   }
 }
-export default App;
+
+export default AddForm;
