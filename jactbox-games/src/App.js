@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import firebase from './firebase.js';
+import AddForm from './AddForm.js'
+import HomePage from './HomePage.js'
+import PhotosDisplay from './PhotosDisplay.js'
+
+import {BrowserRouter, Route, Link} from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -49,6 +54,7 @@ class App extends Component {
     title: this.state.currentItem,
     user: this.state.username
   }
+
   itemsRef.push(item);
   this.setState({
     currentItem: '',
@@ -58,14 +64,20 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <div className='app'>
         <header>
             <div className='wrapper'>
-              <h1>Fun Food Friends</h1>
-
+              <h1>MOCKUPS</h1>
             </div>
         </header>
         <div className='container'>
+        <Link to="/form">
+          <h6>Test Form</h6>
+        </Link>
+        <Link to="/display">
+          <h6>Test Display</h6>
+        </Link>
           <section className="add-item">
             <form onSubmit={this.handleSubmit}>
               <input type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.state.username} />
@@ -73,24 +85,12 @@ class App extends Component {
               <button>Add Item</button>
             </form>
           </section>
-          <section className='display-item'>
-            <div className="wrapper">
-              <ul>
-              {this.state.items.map((item) => {
-                  return (
-                    <li key={item.id}>
-                      <h3>{item.title}</h3>
-                      <p>brought by: {item.user}</p>
-                      <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
-                    </li>
-                  )
-                })
-              }
-              </ul>
-            </div>
-          </section>
         </div>
+        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/form" component={AddForm}/>
+        <Route exact path="/display" component={PhotosDisplay}/>
       </div>
+      </BrowserRouter>
     );
   }
 }

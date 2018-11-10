@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -8,7 +10,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +17,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background: white;
 }
 
 .App-link {
@@ -31,20 +33,25 @@
   }
 }
 
+html{
+  background: linear-gradient(to right, rgba(255, 55, 100, 0.62), rgba(255, 38, 0, 0.9)) !important;
+  background-size: cover !important;
+  height: 100%;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 header {
   color: #fff;
-  background-color: #103D5D;
   padding: 33px 0 25px 15px;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 75px;
+  font-weight: bold;
   letter-spacing: 0.3px;
   display: inline-block;
   margin: 0;
