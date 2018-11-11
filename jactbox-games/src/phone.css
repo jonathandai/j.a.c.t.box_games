@@ -51,14 +51,14 @@
 .phone-lobby{
   position: absolute;
   height: 100%;
-  margin-left: 20%;
-  margin-right: 20%;
-  vertical-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  vertical-align: middle;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 64px;
+  font-size: 48px;
   text-align: center;
 
   color: #000000;
