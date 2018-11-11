@@ -88,7 +88,7 @@ class PhoneVoting extends Component {
           {this.state.items.map((item) => {
               return (
                 <div className="imgHolder" key={item.id} onClick={() => {this.vote(item.id)}}>
-                  <img src={item.img} style={{width:"90px",height:"90px"}}/>
+                  <img src={item.img} style={{width:"162.48px",height:"90px"}}/>
                 </div>
               )
             })
