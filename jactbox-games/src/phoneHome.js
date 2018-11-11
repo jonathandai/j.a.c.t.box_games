@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './firebase.js';
 import './phone.css';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 
 class PhoneHome extends Component {
   render() {
