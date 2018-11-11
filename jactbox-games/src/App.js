@@ -13,6 +13,7 @@ import PhoneCanvas from "./PhoneCanvas.js"
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 import Voting from "./Voting.js"
 import PhoneVoting from "./PhoneVoting.js"
+import PhoneEnd from "./PhoneEnd.js"
 
 class App extends Component {
   constructor() {
@@ -85,6 +86,7 @@ class App extends Component {
         <Route exact path="/phone/voting" component={PhoneVoting}/>
         <Route exact path="/phone/canvas/:id" component={PhoneCanvas}/>
         <Route exact path="/Voting" component={Voting}/>
+        <Route exact path="/phone/end" component={PhoneEnd}/>
       </div>
       </BrowserRouter>
     );

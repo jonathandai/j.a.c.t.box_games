@@ -75,7 +75,7 @@ class PhoneVoting extends Component {
       var numVotesProp = k + "/numVotes"
       if(isNaN(itemsRef.child(k).numvotes)) {itemsRef.child(k).update({'numVotes': 1,})}
       else {itemsRef.child(k).update({'numVotes': itemsRef.child(k).numvotes + 1,})}
-      this.props.history.push('/winner');
+      this.props.history.push('/phone/end');
   }
   };
 
