@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import firebase from './firebase.js';
-import AddForm from './AddForm.js';
-import HomePage from './HomePage.js';
-import PhotosDisplay from './PhotosDisplay.js';
+import AddForm from './AddForm.js'
+import HomePage from './HomePage.js'
+import PhotosDisplay from './PhotosDisplay.js'
+import Players from './Players.js'
 import PhoneHome from './phoneHome.js';
 import PhoneLobby from './PhoneLobby.js'
 
@@ -71,9 +72,13 @@ class App extends Component {
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
+<<<<<<< HEAD
         <Route exact path="/phone/home" component={PhoneHome}/>
         <Route exact path="/phone/lobby" component={PhoneLobby}/>
         <Route exact path="/phone/canvas" component={PhoneCanvas}/>
+=======
+        <Route exact path="/players" component={Players}/>
+>>>>>>> homepage
       </div>
       </BrowserRouter>
     );

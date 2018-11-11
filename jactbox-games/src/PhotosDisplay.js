@@ -63,9 +63,8 @@ class PhotosDisplay extends Component {
           {this.state.items.map((item) => {
               return (
                 <li key={item.id}>
-                  <h3>{item.title}</h3>
-                  <p>brought by: {item.user}</p>
-                  <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
+                  <h3 style={{display:"inline-block"}}>{item.user}</h3>
+                  <button style={{display:"inline-block", width:"30px", minWidth:"30px"}} onClick={() => this.removeItem(item.id)}>X</button>
                 </li>
               )
             })
