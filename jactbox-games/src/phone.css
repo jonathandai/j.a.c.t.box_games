@@ -1,8 +1,9 @@
-html {
-  background-color: #000000;
+.phone{
+  background-color: #FFFFFF !important;
   width:667px;
   height:375px;
 }
+
  .wrapper {
    position: absolute;
    width: 402px;
@@ -16,6 +17,7 @@ html {
   font-style: SemiBold;
   font-size: 48px;
   line-height: 59px;
+  width: 100%;
   align-items: center;
   color: #000000;
 }
