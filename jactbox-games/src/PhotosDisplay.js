@@ -5,7 +5,6 @@ class PhotosDisplay extends Component {
   constructor() {
     super();
     this.state = {
-      currentItem: '',
       username: '',
       items: []
     }
