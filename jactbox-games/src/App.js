@@ -11,6 +11,7 @@ import Rules from "./Rules.js"
 import Question from "./Question.js"
 import PhoneCanvas from "./PhoneCanvas.js"
 import {BrowserRouter, Route, Link} from 'react-router-dom'
+import Voting from "./Voting.js"
 import PhoneVoting from "./PhoneVoting.js"
 
 class App extends Component {
@@ -76,12 +77,14 @@ class App extends Component {
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
         <Route exact path="/phone/home" component={PhoneHome}/>
-        <Route exact path="/phone/lobby" component={PhoneLobby}/>
+        <Route exact path="/phone/lobby/:id" component={PhoneLobby}/>
         <Route exact path="/players" component={Players}/>
         <Route exact path="/Rules" component={Rules}/>
         <Route exact path="/Question" component={Question}/>
         <Route exact path="/phone/canvas" component={PhoneCanvas}/>
         <Route exact path="/phone/voting" component={PhoneVoting}/>
+        <Route exact path="/phone/canvas/:id" component={PhoneCanvas}/>
+        <Route exact path="/Voting" component={Voting}/>
       </div>
       </BrowserRouter>
     );
