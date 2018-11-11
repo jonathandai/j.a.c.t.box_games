@@ -4,7 +4,7 @@ import './phone.css';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import sdb from 'simple-drawing-board';
 import DrawableCanvas from 'react-drawable-canvas';
-
+import html2canvas from 'html2canvas';
 
 class PhoneCanvas extends Component {
   constructor(props) {
@@ -14,20 +14,31 @@ class PhoneCanvas extends Component {
      lineWidth: 2,
      canvasStyle: {
        backgroundColor: '#FFFFFF'
-
      },
-     clear: false
-   }
- }
+     key: this.props.match.params.id,
+     clear: false,
 
- //html2canvas(document.querySelector("#capture")).then(canvas => {
-    // document.body.appendChild(canvas)
-// });
+   }
+    this.convertCanvasToImage = this.convertCanvasToImage.bind(this)
+ }
 
   convertCanvasToImage(canvas) {
 	var image = new Image();
-	//image.src = canvas.toDataURL("image/png");
-	return image;
+  console.log(canvas);
+  const body = document.querySelector('body')
+  const can = document.querySelector('canvas')
+  html2canvas(can).then(canvas => {
+      let croppedCanvas = document.createElement('canvas')
+     let croppedCanvasContext = croppedCanvas.getContext('2d')
+     croppedCanvasContext.drawImage(canvas,667,375);
+    let image = croppedCanvas.toDataURL('image/jpeg')})
+     console.log(image);
+     const itemsRef = firebase.database().ref('items');
+     itemsRef.child(this.state.key).update({'img': can.toDataURL()})
+     this.props.history.push('/phone/voting');
+
+//	return image;
+//this.props.onEndCapture(croppedCanvas.toDataURL())
 }
 
  handleOnClickClear() {
@@ -47,6 +58,7 @@ render() {
   };
   return (
     <div>
+    {this.state.user}
       <div className='canvas-state'>
       <div className='button-bar'>
         <button className = 'clear-button' onClick={() => this.handleOnClickClear()}>clear all</button>
