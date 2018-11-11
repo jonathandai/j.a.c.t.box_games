@@ -7,9 +7,8 @@ class PhoneVoting extends Component {
   constructor() {
     super();
     this.state = {
-      currentItem: '',
       username: '',
-      items: []
+      item: '',
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -68,7 +67,7 @@ class PhoneVoting extends Component {
           {this.state.items.map((item) => {
               return (
                 <div className="imgHolder" key={item.id}>
-                  <button style={{display:"inline-block", width:"30px", minWidth:"30px"}} onClick={() => this.removeItem(item.id)}>X</button>
+                  <img src=item.title>
                 </div>
               )
             })
