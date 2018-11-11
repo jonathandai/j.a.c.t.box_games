@@ -123,6 +123,8 @@ ul li {
 	width: 40px;
 	height: 40px;
 }
+
+
 button {
 	background: #68B25B;
 	box-shadow: 0 3px 0 0 #6A845F;
@@ -150,12 +152,43 @@ button {
 	top: 2px;
 }
 
+.canvas-state{
+  height:375px;
+  width:667px;
+  overflow: hidden;
+}
+
 .clear-button{
-  width: 80px;
-  height: 80px;
+  position: absolute;
+  line-height: 20px;
+  width: 60px;
+  height: 40px;
+  color: white;
+  background: #A9A9A9;
   border-radius: 3px;
   box-shadow: none;
   float: left;
+  border: none;
+  margin: 0px 0px 0px 0px;
+}
+
+.canvas-style{
+  height: 425px;
+  overflow: hidden;
+  margin-top: -50px;
+}
+
+.next-button{
+  position: absolute;
+  line-height: 20px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background: green;
+  border-radius: 3px;
+  box-shadow: none;
+  top:88%;
+  left:81%;
   border: none;
   margin: 0px 0px 0px 0px;
 }
