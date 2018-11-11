@@ -5,8 +5,8 @@ class Question extends Component {
 	constructor() {
     super();
     var people= ['astronauts', 'teachers', 'kids', 'firefighters', 'aliens', 'puppies', 'travelers'];
-    var problems= ['get to school', 'have a garden', 'make freinds', 'throw a party', 'go to the beach', 'be healthy'];
-    var constraints= ['under water', 'very european', 'green', 'not using technology','lighter than a brick', 'quick'];
+    var problems= ['get to school', 'have a garden', 'make friends', 'throw a party', 'go to the beach', 'be healthy'];
+    var constraints= ['underwater', 'very european', 'green', 'not using technology','lighter than a brick', 'quick'];
     console.log(this.props);
     this.state = {
 	  person: people[Math.floor(Math.random() * 6)],
@@ -23,7 +23,7 @@ class Question extends Component {
               </div>
  			 <div class="column">
  			 <div className='problem'>
-              find a way for <br/><br/>
+              help <br/><br/>
               to <br/><br/>
               that is
               </div>
