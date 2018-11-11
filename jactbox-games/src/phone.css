@@ -1,0 +1,29 @@
+ .wrapper {
+   position: absolute;
+   width: 402px;
+   height: 64px;
+   left: 132px;
+   top: 45px;
+   font-family: Montserrat;
+   font-style: SemiBold;
+   font-size: 48px;
+   line-height: 59px;
+   align-items: center;
+   color: #000000;
+}
+
+.formField {
+  position: absolute;
+  width: 153px;
+  height: 33px;
+  left: 196px;
+  top: 139px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 24px;
+
+  color: #929292;
+}
