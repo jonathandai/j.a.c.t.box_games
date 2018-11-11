@@ -20,19 +20,22 @@ class PhoneHome extends Component {
     [e.target.name]: e.target.value
   });
   }
+
   handleSubmit(e) {
   e.preventDefault();
   const itemsRef = firebase.database().ref('items');
   const item = {
-    user: this.state.username
+    user: this.state.username,
+    numVotes: 0,
+    img: ""
   }
 
   itemsRef.push(item);
   this.setState({
-    username: ''
+    username: ""
   });
-  this.props.history.push('/phone/lobby')
-
+  var url = "/phone/lobby/" + this.state.username
+  this.props.history.push(url)
 }
 
   render() {
@@ -43,9 +46,7 @@ class PhoneHome extends Component {
                 <div className='formField'>
                 <form onSubmit={this.handleSubmit}>
                   <input type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.state.username} />
-                <Link to="/Phone/Lobby">
                   <button type="Submit" class="phone-button" onClick={this.handleSubmit}>join game</button>
-                </Link>
                 </form>
                   </div>
               </div>
