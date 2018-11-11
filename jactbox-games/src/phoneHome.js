@@ -10,13 +10,13 @@ class PhoneHome extends Component {
               <div className='wrapper'>
                 <h1>MOCKUPS</h1>
                 <div className='formField'>
-                  <h3>Game Code</h3>
+                  <h3>game code</h3>
                 </div>
                 <div className='formField'>
-                  <h3>Nickname</h3>
+                  <h3>nickname</h3>
                 </div>
                 <Link to="/display">
-                  <button>Join Game</button>
+                  <button class="phone-button">join game</button>
                 </Link>
               </div>
       </div>
