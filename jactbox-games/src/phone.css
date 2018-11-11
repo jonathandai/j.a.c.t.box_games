@@ -21,12 +21,13 @@
   height: 33px;
   left: 196px;
   top: 139px;
+}
 
+.formField h3{
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
   font-size: 24px;
-
   color: #929292;
 }
