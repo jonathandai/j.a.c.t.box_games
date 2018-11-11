@@ -43,7 +43,7 @@
   width: 149px;
   height: 44px;
   left: calc(50% - 149px/2);
-  top: calc(50% - 44px/2 + 126.5px);
-
+  top: calc(50% - 44px/2 + 175px);
+  background: #FF3764;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
 }
