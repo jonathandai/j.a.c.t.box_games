@@ -7,6 +7,8 @@ import PhotosDisplay from './PhotosDisplay.js'
 import Players from './Players.js'
 import PhoneHome from './phoneHome.js';
 import PhoneLobby from './PhoneLobby.js'
+import Rules from "./Rules.js"
+import Question from "./Question.js"
 
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
@@ -73,12 +75,17 @@ class App extends Component {
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route exact path="/phone/home" component={PhoneHome}/>
         <Route exact path="/phone/lobby" component={PhoneLobby}/>
         <Route exact path="/phone/canvas" component={PhoneCanvas}/>
 =======
         <Route exact path="/players" component={Players}/>
 >>>>>>> homepage
+=======
+        <Route exact path="/Rules" component={Rules}/>
+        <Route exact path="/Question" component={Question}/>
+>>>>>>> origin/Rules
       </div>
       </BrowserRouter>
     );
