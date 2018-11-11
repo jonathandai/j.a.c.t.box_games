@@ -19,6 +19,17 @@ class PhoneCanvas extends Component {
      clear: false
    }
  }
+
+ //html2canvas(document.querySelector("#capture")).then(canvas => {
+    // document.body.appendChild(canvas)
+// });
+
+  convertCanvasToImage(canvas) {
+	var image = new Image();
+	//image.src = canvas.toDataURL("image/png");
+	return image;
+}
+
  handleOnClickClear() {
   this.setState({
     clear: true
@@ -40,7 +51,14 @@ render() {
       <div className='button-bar'>
         <button className = 'clear-button' onClick={() => this.handleOnClickClear()}>clear all</button>
       </div>
+
+      <div className='button-bar'>
+        <button className = 'next-button' onClick={() => this.convertCanvasToImage(this)}>submit!</button>
+      </div>
+
+      <div className = 'canvas-style'>
       <DrawableCanvas {...this.state} />
+      </div>
       </div>
         <div className='canvasWrapper'>
           </div>
