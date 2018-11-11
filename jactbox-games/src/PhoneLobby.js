@@ -7,7 +7,7 @@ class PhoneLobby extends Component {
   render() {
     return(
       <div className="phone">
-        <div className="phone-lobby">waiting for other players to join</div>
+        <div className="phone-lobby"><p>waiting for other players to join</p></div>
       </div>
   )
   }
