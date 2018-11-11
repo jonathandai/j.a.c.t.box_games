@@ -4,6 +4,7 @@ import firebase from './firebase.js';
 import AddForm from './AddForm.js'
 import HomePage from './HomePage.js'
 import PhotosDisplay from './PhotosDisplay.js'
+import Players from './Players.js'
 
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
@@ -77,6 +78,7 @@ class App extends Component {
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
+        <Route exact path="/players" component={Players}/>
       </div>
       </BrowserRouter>
     );
