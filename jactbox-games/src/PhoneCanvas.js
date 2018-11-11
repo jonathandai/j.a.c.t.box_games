@@ -38,7 +38,7 @@ render() {
     <div>
       <div className='canvas-state'>
       <div className='button-bar'>
-        <button onClick={() => this.handleOnClickClear()}>clear all</button>
+        <button className = 'clear-button' onClick={() => this.handleOnClickClear()}>clear all</button>
       </div>
       <DrawableCanvas {...this.state} />
       </div>
