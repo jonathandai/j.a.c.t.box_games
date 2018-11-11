@@ -9,7 +9,7 @@ import PhoneHome from './phoneHome.js';
 import PhoneLobby from './PhoneLobby.js'
 import Rules from "./Rules.js"
 import Question from "./Question.js"
-
+import PhoneCanvas from "./PhoneCanvas.js"
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
 class App extends Component {
@@ -79,6 +79,7 @@ class App extends Component {
         <Route exact path="/players" component={Players}/>
         <Route exact path="/Rules" component={Rules}/>
         <Route exact path="/Question" component={Question}/>
+        <Route exact path="/phone/canvas" component={PhoneCanvas}/>
       </div>
       </BrowserRouter>
     );
