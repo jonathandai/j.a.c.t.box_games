@@ -5,18 +5,18 @@
   color: white;
   font-family: 'Montserrat';
   font-size: 70px;
-  padding-top: 10px;
+  padding-top: 30px;
 }
 .column {
     float: left;
-    width: 50%;
+    width: 1%;
 }
 .problem{
   color: white;
   font-family: 'Montserrat';
-  font-size: 30px;
-  padding-top: 100px;
-  padding-left: 100px;
+  font-size: 50px;
+  padding-top: 80px;
+  padding-left: 200px;
   width: 400px;
   text-align: right;
 }
@@ -25,7 +25,8 @@
   font-weight: bold;
   font-family: 'Montserrat';
   font-size: 50px;
-  padding-left: 700px;
+  padding-left: 650px;
+  padding-top: 80px;
   width: 500px;
-  text-align: right;
+  text-align: left;
 }

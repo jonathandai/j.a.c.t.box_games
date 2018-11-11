@@ -11,8 +11,8 @@ class Question extends Component {
               
  			 <div class="column">
  			 <div className='problem'>
-              find a way for <br/><br/><br/>
-              to <br/><br/><br/>
+              find a way for <br/><br/>
+              to <br/><br/>
               that is
               </div>
              </div>
