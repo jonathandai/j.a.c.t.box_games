@@ -7,8 +7,11 @@ class PhoneVoting extends Component {
   constructor() {
     super();
     this.state = {
-      username: '',
+      user: '',
       item: '',
+      numVotes: 0,
+      img: '',
+      items:[]
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,8 +31,9 @@ class PhoneVoting extends Component {
       for (let item in items) {
         newState.push({
           id: item,
-          title: items[item].title,
-          user: items[item].user
+          user: items[item].user,
+          numVotes: items[item].numVotes,
+          img: items[item].img
         });
       }
       this.setState({
@@ -58,6 +62,12 @@ class PhoneVoting extends Component {
     });
   }
 
+  vote = event => {
+    if(!this.classList.contains("active")) {
+      this.classList.toggle("active");
+  }
+  };
+
   render() {
     return(
       <div className="phone">
@@ -66,8 +76,8 @@ class PhoneVoting extends Component {
         <div className="gallery">
           {this.state.items.map((item) => {
               return (
-                <div className="imgHolder" key={item.id}>
-                  <img src=item.title>
+                <div className="imgHolder" key={item.id} onClick={this.vote}>
+                  {item.img}
                 </div>
               )
             })
