@@ -5,6 +5,7 @@ import AddForm from './AddForm.js'
 import HomePage from './HomePage.js'
 import PhotosDisplay from './PhotosDisplay.js'
 import Rules from "./Rules.js"
+import Question from "./Question.js"
 
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
@@ -71,6 +72,7 @@ class App extends Component {
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
         <Route exact path="/Rules" component={Rules}/>
+        <Route exact path="/Question" component={Question}/>
       </div>
       </BrowserRouter>
     );

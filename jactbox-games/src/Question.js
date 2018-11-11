@@ -1,19 +1,25 @@
-Question.js
 import React, { Component } from 'react';
-
+import './Question.css';
 class Question extends Component {
   render() {
     return(
-      <div className="home-container">
-        <header>
-            <div className='wrapper'>
-              <h1>MOCKUPS</h1>
+    	<div>
+            <div className='topBar'>
+           	  <header>
+              <h1>YOUR CHALLENGE IS TO...</h1>
+              </header>
+              </div>
+              <div className='problem'>
+              find a way for <br/><br/><br/>
+              to <br/><br/><br/>
+              that is
             </div>
-        </header>
-        <button className='home-button'>host a game</button>
-      </div>s
+            <div>
+            
+            </div>
+         </div>
   )
-  }?
+  }
 }
 
 export default Question;
