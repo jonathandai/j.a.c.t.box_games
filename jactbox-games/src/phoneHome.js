@@ -16,7 +16,7 @@ class PhoneHome extends Component {
                   <h3>nickname</h3>
                 </div>
                 <Link to="/display">
-                  <button>join game</button>
+                  <button class="phone-button">join game</button>
                 </Link>
               </div>
       </div>
