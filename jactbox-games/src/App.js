@@ -81,8 +81,7 @@ class App extends Component {
         <Route exact path="/players" component={Players}/>
         <Route exact path="/Rules" component={Rules}/>
         <Route exact path="/Question" component={Question}/>
-        <Route exact path="/phone/canvas" component={PhoneCanvas}/>
-        <Route exact path="/phone/voting" component={PhoneVoting}/>
+        <Route exact path="/phone/voting/:id" component={PhoneVoting}/>
         <Route exact path="/phone/canvas/:id" component={PhoneCanvas}/>
         <Route exact path="/Voting" component={Voting}/>
       </div>

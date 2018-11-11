@@ -18,9 +18,8 @@ class HomePage extends Component {
               <h1>MOCKUPS</h1>
             </div>
         </header>
-
         <Link to="/players">
-          <button className='home-button'>host a game</button>
+          <a className='home-button'>host a game</a>
         </Link>
       </div>
   )
