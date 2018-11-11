@@ -4,7 +4,7 @@ import './phone.css';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import sdb from 'simple-drawing-board';
 import DrawableCanvas from 'react-drawable-canvas';
-
+import html2canvas from 'html2canvas';
 
 class PhoneCanvas extends Component {
   constructor(props) {
@@ -24,10 +24,19 @@ class PhoneCanvas extends Component {
     // document.body.appendChild(canvas)
 // });
 
+
+
+
   convertCanvasToImage(canvas) {
 	var image = new Image();
+  const body = document.querySelector('body')
+  html2canvas(body).then(canvas => {
+      let croppedCanvas = document.createElement('canvas')
+     let croppedCanvasContext = croppedCanvas.getContext('2d')
+     croppedCanvasContext.drawImage(canvas,667,375);
+    this.props.onEndCapture(croppedCanvas.toDataURL())});
 	//image.src = canvas.toDataURL("image/png");
-	return image;
+//	return image;
 }
 
  handleOnClickClear() {
