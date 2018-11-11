@@ -75,7 +75,7 @@ class PhoneVoting extends Component {
       var numVotesProp = k + "/numVotes"
       if(isNaN(itemsRef.child(k).numvotes)) {itemsRef.child(k).update({'numVotes': 1,})}
       else {itemsRef.child(k).update({'numVotes': itemsRef.child(k).numvotes + 1,})}
-      this.props.history.push('/winner');
+      this.props.history.push('/phone/end');
   }
   };
 
@@ -88,7 +88,7 @@ class PhoneVoting extends Component {
           {this.state.items.map((item) => {
               return (
                 <div className="imgHolder" key={item.id} onClick={() => {this.vote(item.id)}}>
-                  {item.img}
+                  <img src={item.img} style={{width:"90px",height:"90px"}}/>
                 </div>
               )
             })
