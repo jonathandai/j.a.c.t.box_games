@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^3.9.0",
+    "html2canvas": "^1.0.0-alpha.12",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-drawable-canvas": "^1.1.1",
