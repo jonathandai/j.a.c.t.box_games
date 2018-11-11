@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Question.css';
 class Question extends Component {
-	
+
 	constructor() {
     super();
     var people= ['astronauts', 'teachers', 'kids', 'firefighters', 'aliens', 'puppies', 'travelers'];
@@ -13,8 +13,15 @@ class Question extends Component {
 	  problem: problems[Math.floor(Math.random() * 6)],
 	  constraint: constraints[Math.floor(Math.random() * 6)],
     }
-   
+
   }
+
+	componentWillMount(){
+		setTimeout(() => {
+			this.props.history.push('/voting');
+		}, 60000);
+	}
+
   render() {
     return(
     	<div>
@@ -33,14 +40,13 @@ class Question extends Component {
            {this.state.person} <br/><br/>
            {this.state.problem} <br/><br/>
            {this.state.constraint} <br/><br/>
-         
+
 			</div>
 			</div>
-                         
+
          </div>
   )
   }
 }
 
 export default Question;
-
