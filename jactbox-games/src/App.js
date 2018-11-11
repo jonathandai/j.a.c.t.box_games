@@ -74,18 +74,11 @@ class App extends Component {
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Route exact path="/phone/home" component={PhoneHome}/>
         <Route exact path="/phone/lobby" component={PhoneLobby}/>
-        <Route exact path="/phone/canvas" component={PhoneCanvas}/>
-=======
         <Route exact path="/players" component={Players}/>
->>>>>>> homepage
-=======
         <Route exact path="/Rules" component={Rules}/>
         <Route exact path="/Question" component={Question}/>
->>>>>>> origin/Rules
       </div>
       </BrowserRouter>
     );
