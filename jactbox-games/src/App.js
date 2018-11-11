@@ -67,14 +67,6 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div className='app'>
-        <div className='container'>
-        <Link to="/form">
-          <h6>Test Form</h6>
-        </Link>
-        <Link to="/display">
-          <h6>Test Display</h6>
-        </Link>
-        </div>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
