@@ -73,6 +73,7 @@ class App extends Component {
         <Route exact path="/display" component={PhotosDisplay}/>
         <Route exact path="/phone/home" component={PhoneHome}/>
         <Route exact path="/phone/lobby" component={PhoneLobby}/>
+        <Route exact path="/phone/canvas" component={PhoneCanvas}/>
       </div>
       </BrowserRouter>
     );
