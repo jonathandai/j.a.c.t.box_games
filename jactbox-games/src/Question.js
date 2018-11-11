@@ -18,9 +18,9 @@ class Question extends Component {
              </div>
 			 <div class="column">
 			<div className='topics'>
-            some person <br/><br/>
-            some problem<br/><br/>
-            some constraint<br/><br/>
+            Some Person <br/><br/>
+            Some Problem<br/><br/>
+            Some Constraint<br/><br/>
           
 			</div>
 			</div>

@@ -1,6 +1,7 @@
 .topBar {
   max-width: 1100px;
   margin: 0 auto;
+  font-weight: semi;
   text-align: center;
   color: white;
   font-family: 'Montserrat';
@@ -22,7 +23,7 @@
 }
 .topics{
   color: white;
-  font-weight: bold;
+  font-weight: 1000;
   font-family: 'Montserrat';
   font-size: 50px;
   padding-left: 650px;
