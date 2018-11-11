@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import firebase from './firebase.js';
+import './main.css';
 
 class HomePage extends Component {
   constructor() {
@@ -13,15 +14,14 @@ class HomePage extends Component {
   render() {
     return(
       <div className="home-container">
-        <header>
-            <div className='wrapper'>
+            <div className='rapper'>
               <h1>MOCKUPS</h1>
-            </div>
-        </header>
+
 
         <Link to="/players">
-          <button className='home-button'>host a game</button>
+          <div className="button">host a game</div>
         </Link>
+        </div>
       </div>
   )
   }
