@@ -47,3 +47,16 @@
   background: #FF3764;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
+.phone-lobby{
+  position: absolute;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 48px;
+  text-align: center;
+
+  color: #000000;
+}
