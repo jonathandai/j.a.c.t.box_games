@@ -15,29 +15,28 @@ class PhoneCanvas extends Component {
      canvasStyle: {
        backgroundColor: '#FFFFFF'
      },
-     user: this.props.match.params.id,
-     clear: false
+     key: this.props.match.params.id,
+     clear: false,
+
    }
+    this.convertCanvasToImage = this.convertCanvasToImage.bind(this)
  }
-
- //html2canvas(document.querySelector("#capture")).then(canvas => {
-    // document.body.appendChild(canvas)
-// });
-
-
-
 
   convertCanvasToImage(canvas) {
 	var image = new Image();
+  console.log(canvas);
   const body = document.querySelector('body')
-  html2canvas(body).then(canvas => {
+  const can = document.querySelector('canvas')
+  html2canvas(can).then(canvas => {
       let croppedCanvas = document.createElement('canvas')
      let croppedCanvasContext = croppedCanvas.getContext('2d')
      croppedCanvasContext.drawImage(canvas,667,375);
-     let image = croppedCanvas.toDataURL()})
+    let image = croppedCanvas.toDataURL('image/jpeg')})
      console.log(image);
      const itemsRef = firebase.database().ref('items');
-     itemsRef.child(this.state.user).update({'img': image})
+     itemsRef.child(this.state.key).update({'img': can.toDataURL()})
+     this.props.history.push('/phone/voting');
+
 //	return image;
 //this.props.onEndCapture(croppedCanvas.toDataURL())
 }
