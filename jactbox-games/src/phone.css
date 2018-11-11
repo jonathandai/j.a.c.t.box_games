@@ -126,66 +126,14 @@ ul li {
 button {
 	background: #68B25B;
 	box-shadow: 0 3px 0 0 #6A845F;
-	color: #fff;
+	color: #FFFFFF;
 	outline: none;
 	cursor: pointer;
-	text-shadow: 0 1px #6A845F;
 	display: block;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 40px;
 }
-#revealColorSelect, #clear, #refer {
-	border: none;
-	border-radius: 5px;
-	margin: 10px auto;
-	padding: 5px 20px;
-	width: 160px;
-}
-#refer {
-  background: #ECD13F;
 
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-/* New Color Palette */
-#colorSelect {
-	background: #fff;
-	border-radius: 5px;
-	clear: both;
-	margin: 20px auto 0;
-	padding: 10px;
-	width: 305px;
-	position: relative;
-
-	display:none;
-}
-#colorSelect:after {
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(255, 255, 255, 0);
-	border-bottom-color: #fff;
-	border-width: 10px;
-	margin-left: -10px;
-}
-
-#newColor {
-	width: 80px;
-	height: 80px;
-	border-radius: 3px;
-	box-shadow: none;
-	float: left;
-	border: none;
-	margin: 10px 20px 20px 10px;
-
-}
 .sliders p {
 	margin: 8px 0;
 	vertical-align: middle;
@@ -201,15 +149,13 @@ a {
 	position: relative;
 	top: 2px;
 }
-#colorSelect button {
-	border: none;
-	border-top: 1px solid #6A845F;
-	border-radius: 0 0 5px 5px;
-	clear: both;
-	margin: 10px -10px -7px;
-	padding: 5px 10px;
-	width: 325px;
-}
-.button-bar{
-  width: 100px;
+
+.clear-button{
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  box-shadow: none;
+  float: left;
+  border: none;
+  margin: 0px 0px 0px 0px;
 }
