@@ -1,0 +1,19 @@
+
+.long-text{
+  color: white;
+  font-family: 'Montserrat';
+  padding: 150px 80px;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.rules-button{
+  background: white;
+  color: #3a3434;
+  padding: 15px 80px;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  margin: 0 auto;
+}

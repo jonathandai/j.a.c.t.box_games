@@ -4,6 +4,7 @@ import firebase from './firebase.js';
 import AddForm from './AddForm.js'
 import HomePage from './HomePage.js'
 import PhotosDisplay from './PhotosDisplay.js'
+import Rules from "./Rules.js"
 
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
@@ -66,17 +67,10 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div className='app'>
-        <div className='container'>
-        <Link to="/form">
-          <h6>Test Form</h6>
-        </Link>
-        <Link to="/display">
-          <h6>Test Display</h6>
-        </Link>
-        </div>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/form" component={AddForm}/>
         <Route exact path="/display" component={PhotosDisplay}/>
+        <Route exact path="/Rules" component={Rules}/>
       </div>
       </BrowserRouter>
     );
