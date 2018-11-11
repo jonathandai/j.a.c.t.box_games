@@ -3,6 +3,8 @@ import firebase from './firebase.js';
 import './phoneVoting.css';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 
+var Voted = false;
+
 class PhoneVoting extends Component {
   constructor() {
     super();
@@ -62,9 +64,18 @@ class PhoneVoting extends Component {
     });
   }
 
-  vote = event => {
-    if(!this.classList.contains("active")) {
-      this.classList.toggle("active");
+  vote(k) {
+    if(Voted) {
+      alert("You have already entered your vote!");
+      return;
+    }
+    else {
+      Voted = true;
+      const itemsRef = firebase.database().ref('items');
+      var numVotesProp = k + "/numVotes"
+      if(isNaN(itemsRef.child(k).numvotes)) {itemsRef.child(k).update({'numVotes': 1,})}
+      else {itemsRef.child(k).update({'numVotes': itemsRef.child(k).numvotes + 1,})}
+      this.props.history.push('/winner');
   }
   };
 
@@ -76,7 +87,7 @@ class PhoneVoting extends Component {
         <div className="gallery">
           {this.state.items.map((item) => {
               return (
-                <div className="imgHolder" key={item.id} onClick={this.vote}>
+                <div className="imgHolder" key={item.id} onClick={() => {this.vote(item.id)}}>
                   {item.img}
                 </div>
               )
@@ -87,5 +98,6 @@ class PhoneVoting extends Component {
   )
   }
 }
+
 
 export default PhoneVoting;
