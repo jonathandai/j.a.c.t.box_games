@@ -14,8 +14,8 @@ class PhoneCanvas extends Component {
      lineWidth: 2,
      canvasStyle: {
        backgroundColor: '#FFFFFF'
-
      },
+     user: this.props.match.params.id,
      clear: false
    }
  }
@@ -34,9 +34,12 @@ class PhoneCanvas extends Component {
       let croppedCanvas = document.createElement('canvas')
      let croppedCanvasContext = croppedCanvas.getContext('2d')
      croppedCanvasContext.drawImage(canvas,667,375);
-    this.props.onEndCapture(croppedCanvas.toDataURL())});
-	//image.src = canvas.toDataURL("image/png");
+     let image = croppedCanvas.toDataURL()})
+     console.log(image);
+     const itemsRef = firebase.database().ref('items');
+     itemsRef.child(this.state.user).update({'img': image})
 //	return image;
+//this.props.onEndCapture(croppedCanvas.toDataURL())
 }
 
  handleOnClickClear() {
@@ -56,6 +59,7 @@ render() {
   };
   return (
     <div>
+    {this.state.user}
       <div className='canvas-state'>
       <div className='button-bar'>
         <button className = 'clear-button' onClick={() => this.handleOnClickClear()}>clear all</button>
