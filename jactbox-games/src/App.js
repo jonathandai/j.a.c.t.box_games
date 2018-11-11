@@ -11,6 +11,7 @@ import Rules from "./Rules.js"
 import Question from "./Question.js"
 import PhoneCanvas from "./PhoneCanvas.js"
 import {BrowserRouter, Route, Link} from 'react-router-dom'
+import Voting from "./Voting.js"
 
 class App extends Component {
   constructor() {
@@ -80,6 +81,7 @@ class App extends Component {
         <Route exact path="/Rules" component={Rules}/>
         <Route exact path="/Question" component={Question}/>
         <Route exact path="/phone/canvas" component={PhoneCanvas}/>
+        <Route exact path="/Voting" component={Voting}/>
       </div>
       </BrowserRouter>
     );
