@@ -3,13 +3,17 @@ import firebase from './firebase.js';
 import './phoneVoting.css';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 
+var Voted = false;
+
 class PhoneVoting extends Component {
   constructor() {
     super();
     this.state = {
-      currentItem: '',
-      username: '',
-      items: []
+      user: '',
+      item: '',
+      numVotes: 0,
+      img: '',
+      items:[]
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,8 +33,9 @@ class PhoneVoting extends Component {
       for (let item in items) {
         newState.push({
           id: item,
-          title: items[item].title,
-          user: items[item].user
+          user: items[item].user,
+          numVotes: items[item].numVotes,
+          img: items[item].img
         });
       }
       this.setState({
@@ -59,6 +64,21 @@ class PhoneVoting extends Component {
     });
   }
 
+  vote(k) {
+    if(Voted) {
+      alert("You have already entered your vote!");
+      return;
+    }
+    else {
+      Voted = true;
+      const itemsRef = firebase.database().ref('items');
+      var numVotesProp = k + "/numVotes"
+      if(isNaN(itemsRef.child(k).numvotes)) {itemsRef.child(k).update({'numVotes': 1,})}
+      else {itemsRef.child(k).update({'numVotes': itemsRef.child(k).numvotes + 1,})}
+      this.props.history.push('/winner');
+  }
+  };
+
   render() {
     return(
       <div className="phone">
@@ -67,8 +87,8 @@ class PhoneVoting extends Component {
         <div className="gallery">
           {this.state.items.map((item) => {
               return (
-                <div className="imgHolder" key={item.id}>
-                  <button style={{display:"inline-block", width:"30px", minWidth:"30px"}} onClick={() => this.removeItem(item.id)}>X</button>
+                <div className="imgHolder" key={item.id} onClick={() => {this.vote(item.id)}}>
+                  {item.img}
                 </div>
               )
             })
@@ -78,5 +98,6 @@ class PhoneVoting extends Component {
   )
   }
 }
+
 
 export default PhoneVoting;
