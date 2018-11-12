@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './firebase.js';
+import './App.css';
 
 class PhotosDisplay extends Component {
   constructor() {
@@ -57,13 +58,13 @@ class PhotosDisplay extends Component {
   render() {
     return(
       <section className='display-item'>
-        <div className="wrapper">
+        <div className="playerWrapper">
           <ul>
           {this.state.items.map((item) => {
               return (
-                <li key={item.id}>
+                <li className="players" key={item.id}>
+                  <button className="closePlayer" onClick={() => this.removeItem(item.id)}>X</button>
                   <h3 style={{display:"inline-block"}}>{item.user}</h3>
-                  <button style={{display:"inline-block", width:"30px", minWidth:"30px"}} onClick={() => this.removeItem(item.id)}>X</button>
                 </li>
               )
             })

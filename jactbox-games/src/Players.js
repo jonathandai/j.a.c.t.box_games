@@ -14,16 +14,18 @@ class Players extends Component {
   render() {
     return(
       <div>
-        <div style={{width:"70%", display:"inline-block"}}>
+        <div className="photosDisplay">
           <PhotosDisplay/>
         </div>
-        <div style={{width:"30%", color:"white", textAlign:"center", display:"inline-block", verticalAlign:"top"}}>
+        <div className="logInInstructions">
               <h3>Go to:</h3>
               <h4>10.140.8.28:3000/phone/home</h4>
               <br/><br/>
+              
               <Link to="/rules">
-                <button style={{border:"5px solid #fff", background:"transparent", boxShadow:"none", fontFamily:"Montserrat", fontWeight:"bold", padding:"10px 30px", verticalAlign:"top"}}>start game</button>
+                <button className="playersStart">start game</button>
               </Link>
+
         </div>
       </div>
   )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
 import firebase from './firebase.js';
 import AddForm from './AddForm.js'
 import HomePage from './HomePage.js'
