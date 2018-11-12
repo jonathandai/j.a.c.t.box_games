@@ -220,8 +220,8 @@ button.closePlayer {
 
 .logInInstructions {
   margin-left: 25px;
-  margin-top: 30%;
-  width: 20vw;
+  margin-top: 30vh;
+  width: 250px;
   min-width: 250px;
   color: white;
   text-align: center;
@@ -242,5 +242,5 @@ button.playersStart {
   font-weight: bold;
   padding: 10px 30px;
   vertical-align: top;
-  margin-left: 32.5px;
+  margin-left: 33px;
 }
