@@ -8,7 +8,7 @@ class Rules extends Component {
               <h1>You will have 60 seconds to draw an idea with the given constraints, and then 
 vote on your favorite ones! </h1>
         <Link to="/question">
-        <button className='rules-button'>Start</button>
+        <button className='home-button'>Start</button>
         </Link>
       </div>
   )

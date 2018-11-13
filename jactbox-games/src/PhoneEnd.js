@@ -7,7 +7,7 @@ class PhoneEnd extends Component {
   render() {
     return(
       <div className="phone">
-        <div className='endWrapper'>
+        <div className="finito">
           <h1>Thanks for Playing!</h1>
         </div>
       </div>

@@ -2,12 +2,13 @@
 .long-text{
   color: white;
   font-family: 'Montserrat';
-  padding: 150px 80px;
+  padding: 75px 80px;
   font-size: 30px;
   text-align: center;
   margin: 0 auto;
 }
 
+/*
 .rules-button{
   background: white;
   color: #3a3434;
@@ -15,3 +16,4 @@
   font-family: 'Montserrat';
   font-weight: bold;
 }
+*/

@@ -41,7 +41,7 @@ class PhoneHome extends Component {
   render() {
     return(
       <div className="phone">
-              <div className='wrapper'>
+              <div className='rapper'>
                 <h1>MOCKUPS</h1>
                 <div className='formField'>
                 <form onSubmit={this.handleSubmit}>

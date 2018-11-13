@@ -25,24 +25,25 @@ class Question extends Component {
   render() {
     return(
     	<div>
-	      <div className='topBar'>
-	        YOUR CHALLENGE IS TO...
-	      </div>
- 			 <div class="column">
-	 			 <div className='problem'>
-	             help<br/><br/>
-	              find a way to<br/><br/>
-	              that is
+	    <div className='topBar'>
+	    	YOUR CHALLENGE IS TO...
+	    </div>
+ 		<div className="column left">
+	 		<div className='problem'>
+	        	help<br/><br/>
+	            find a way to<br/><br/>
+	            that is
 	       </div>
        </div>
-			 <div class="column">
+			 <div className="column right">
 			 		<div className='topics'>
 	           {this.state.person} <br/><br/>
 	           {this.state.problem} <br/><br/>
 	           {this.state.constraint} <br/><br/>
 					</div>
 			 </div>
-    </div>
+			 </div>
+
   )
   }
 }
