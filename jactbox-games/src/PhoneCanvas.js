@@ -24,6 +24,7 @@ class PhoneCanvas extends Component {
 
   convertCanvasToImage(canvas) {
 	var image = new Image();
+  var url = "/phone/voting/" + this.state.username
   console.log(canvas);
   const body = document.querySelector('body')
   const can = document.querySelector('canvas')
@@ -35,7 +36,7 @@ class PhoneCanvas extends Component {
      console.log(image);
      const itemsRef = firebase.database().ref('items');
      itemsRef.child(this.state.key).update({'img': can.toDataURL()})
-     this.props.history.push('/phone/voting');
+     this.props.history.push(url);
 
 //	return image;
 //this.props.onEndCapture(croppedCanvas.toDataURL())
