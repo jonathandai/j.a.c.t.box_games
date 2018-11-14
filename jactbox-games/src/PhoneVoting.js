@@ -84,7 +84,7 @@ class PhoneVoting extends Component {
       <div className="phone">
         <div className="header"><h1>Vote!</h1></div>
         <div className="padding"></div>
-        <div className="gallery">
+        <div className="gallery phone">
           {this.state.items.map((item) => {
               return (
                 <div className="imgHolder" key={item.id} onClick={() => {this.vote(item.id)}}>
