@@ -178,12 +178,13 @@ button {
   height:375px;
   width:667px;
   overflow: hidden;
+  position: fixed;
 }
 
 .clear-button{
   position: absolute;
   line-height: 20px;
-  width: 60px;
+  width: 80px;
   height: 40px;
   color: white;
   background: #A9A9A9;
@@ -192,25 +193,29 @@ button {
   float: left;
   border: none;
   margin: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
 }
 
 .canvas-style{
-  height: 375px;
-  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
   margin-top: -50px;
 }
 
 .next-button{
   position: absolute;
   line-height: 20px;
-  width: 40px;
+  width: 60px;
   height: 40px;
   color: white;
   background: green;
   border-radius: 3px;
   box-shadow: none;
-  top:88%;
-  left:81%;
+  bottom: 65px;
+  right: 5px;
   border: none;
   margin: 0px 0px 0px 0px;
 }
